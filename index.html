@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanda & Tiago</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Leaflet map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+
+    <!-- Icones google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+    <header>
+        <div class="cover">
+            <div class="nav"></div>
+        </div>
+    </header>
+    <div id="main-container">
+        <!-- Seção Contagem Regressiva -->
+        <div id="counter">
+            <h1>FALTAM</h1>
+            <div id="numDias"></div>
+            <p id="dias">DIAS</p>
+            <div class="tempo">
+                <div id="countdown">
+                    <div>
+                        <span id="horas"></span> 
+                        <span class="data">H</span>
+                    </div>
+                    <div>
+                        <span id="minutos"></span> 
+                        <span class="data">M</span>
+                    </div>
+                    <div>
+                        <span id="segundos"></span> 
+                        <span class="data">S</span>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <a href="#rsvp">Confirmar Presença</button></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Seção História dos Noivos -->
+        <div id="historia" class="titulo-secao">
+            <h1>História</h1>
+            <h1>dos noivos</h1>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="imagem-card">
+                    <img src="img/porto.jpeg" alt="cidade-do-porto" width="auto" height="280">
+                </div>
+                <div class="titulo-card">
+                    <span>P</span>
+                    <span>r</span>
+                    <span>i</span>
+                    <span>m</span>
+                    <span>e</span>
+                    <span>i</span>
+                    <span>r</span>
+                    <span>o</span>
+                    <span> </span>
+                    <span>E</span>
+                    <span>n</span>
+                    <span>c</span>
+                    <span>o</span>
+                    <span>n</span>
+                    <span>t</span>
+                    <span>r</span>
+                    <span>o</span>
+                </div>
+                <h3>05 de agosto de 2016</h3>
+                <p>Tudo começou numa noite de verão na cidade Invicta (Porto), pelas famosas galerias de Paris. Um encontro fortuito que envolveu um sorriso, uma rosa e um beijo, resultou no começo de uma linda história de amor.</p>
+                <hr>
+            </div>
+            <div class="card">
+                <div class="imagem-card">
+                    <img src="img/buque.jpg" alt="buque-de-rosas" width="auto" height="280">
+                </div>
+                <div class="titulo-card">
+                    <span>P</span>
+                    <span>e</span>
+                    <span>d</span>
+                    <span>i</span>
+                    <span>d</span>
+                    <span>o</span>
+                    <span> </span>
+                    <span>d</span>
+                    <span>e</span>
+                    <span> </span>
+                    <span>n</span>
+                    <span>a</span>
+                    <span>m</span>
+                    <span>o</span>
+                    <span>r</span>
+                    <span>o</span>
+                </div>
+                <p>No fim de uma noite de cinema, naquilo que parecia ser a despedida, ao abrir a porta do carro num encantador ato de cavalheirismo,  há a surpresa! Numa mão um buquê de rosas, na outra um peluche, estes foram os companheiros para o pedido de namoro.</p>
+                <hr>
+            </div>
+            <div class="card">
+                <div class="imagem-card">
+                    <img src="img/noivado.jpg" alt="miradouro-do-contrabando" width="281" height="auto">
+                </div>
+                <!-- <h2>Pedido de casamento</h2> -->
+                <div class="titulo-card">
+                    <span>P</span>
+                    <span>e</span>
+                    <span>d</span>
+                    <span>i</span>
+                    <span>d</span>
+                    <span>o</span>
+                    <span> </span>
+                    <span>d</span>
+                    <span>e</span>
+                    <span> </span>
+                    <span>C</span>
+                    <span>a</span>
+                    <span>s</span>
+                    <span>a</span>
+                    <span>m</span>
+                    <span>e</span>
+                    <span>n</span>
+                    <span>t</span>
+                    <span>o</span>
+                </div>
+                <h3>10 de setembro 2021</h3>
+                <p>Entre Portugal e Espanha, o telescópio do miradouro permitiu explorar uma deslumbrante paisagem do Douro. No entanto, a melhor paisagem estava ao virar da lente. O brilho de um anel e a espera semi-ajoelhada da resposta.</p>
+                <hr>
+            </div>
+        </div>
+
+        <!-- Seção Cerimónia e recepção -->
+        <div id="cerimonia" class="titulo-secao">
+            <h1>Cerimónia</h1>
+            <h1>e Recepção</h1>
+        </div>
+        <div class="quinta">
+            <div>
+                <div id="logo-bosque">
+                    <img src="img/bosqueTiaMila.svg" alt="logo-boque-tia-mila">
+                </div>
+                <div id="morada">
+                    <p>
+                        Rua da Estrada Velha, n.966, Mindelo, Vila do Conde
+                    </p>
+                    <hr>
+                    <p>Porto, Portugal</p>
+                    <br>
+                    <div>
+                        <span class="material-symbols-outlined">location_on</span>
+                        <a href="https://www.google.com/maps/dir//O+Bosque+Da+Tia+Mila,+R.+da+Estrada+Velha+966,+4485-487+Mindelo/@41.3213025,-8.7262377,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0xd2443b8382953af:0xd766bb180cc90164!2m2!1d-8.724049!2d41.3213025!3e0" target="blank">Ir para lá</a>
+                    </div>
+                </div>
+            </div>
+            <div id="map">
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Seção Formulário -->
+        <div id="rsvp" class="titulo-secao">
+            <h1>Confirmar</h1>
+            <h1>presença</h1>
+        </div>
+        <div class="formulario">
+            <form action="https://formspree.io/f/myyvyvwb" method="POST">
+                <div>
+                    <label for="nome">Nome <span>(obrigatório)</span></label>
+                    <input type="text" name="Nome" id="nome" required>
+                </div>
+                <div>
+                    <label for="ultimo-nome">Último Nome <span>(obrigatório)</span></label>
+                    <input type="text" name="Último Nome" id="ultimoNome" required>
+                </div>
+                <div>
+                    <label for="email">E-mail <span>(obrigatório)</span></label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="presenca">Virá ao casamento <span>(obrigatório)</span></label>
+                    <select name="Presença no casamento" id="attending" required>
+                        <option value="" selected></option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="plus">Quantas pessoas vêm como você?<span>(obrigatório)</span></label>
+                    <select name="Quantos Acompanhantes" id="plus" required>
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="acompanhantes">Nome e último nome dos acompanhantes</label>
+                    <textarea name="Acompanhantes" id="nome-acompanhante" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <label for="mensagem">Deixe sua mensagem para os noivos</label>
+                    <textarea name="Mensagem aos noivos" id="mensagem-noivos" cols="30" rows="10"></textarea>
+                </div>
+                <input type="hidden" name="_subject" id="email-subject" value="RSVP">
+                <button type="submit" id="submit" value="RSVP">Confirmar</button>
+            </form>
+
+        </div>
+    </div>
+   
+    <!-- Código do countdown -->
+    <script>
+        // Selecionar data até onde se conta
+        var countDownDate = new Date("May 27, 2023 17:30:00").getTime();
+
+        // Atualização da contagem a cada 1 segundo
+        var x = setInterval(function(){
+            // Pegar a data e hora de hoje
+            var now = new Date().getTime();
+
+            // Encontrar a distância entre o agora e a data pretendida
+            var distance = countDownDate - now;
+
+            // Cálculo do tempo para dias, horas, minutos e segundos
+            var days = Math.floor(distance / (1000*60*60*24));
+            var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+            var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+            var seconds = Math.floor((distance % (1000*60)) / 1000);
+
+            // Mostrar o resultado no site - no "countdown"
+            document.getElementById("numDias").innerHTML = days;
+            document.getElementById("horas").innerHTML = hours;
+            document.getElementById("minutos").innerHTML = minutes;
+            document.getElementById("segundos").innerHTML = seconds;
+
+            // Se a contagem estiver terminada, mostrar outra mensagem
+            if(distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "JÁ CASAMOS!";
+            }
+        }, 1000);
+    </script>
+    
+    <!-- Código Mapa -->
+    <script>
+        // Mapa
+        var map = L.map('map', {
+            zoomControl: false
+        }).setView([41.21406046776173, -8.658319485822066], 9);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Marcador personalizado
+        var leafletIcon = L.icon({
+            iconUrl: 'img/location_on_FILL1_wght400_GRAD0_opsz48.svg',
+            iconSize: [38,38],
+            iconAnchor: [20,30],
+            popupAnchor: [1,-8], 
+        })
+
+        // Marcador da Quinta
+        var marker = L.marker([41.32180705606454, -8.72393161273013], {icon:leafletIcon}).addTo(map);
+
+        marker.bindPopup("<b>Bosque da Tia Mila</b><br>Quinta para casamentos.").openPopup();
+        
+        // Marcador do Porto
+        var marker = L.marker([41.1577203567119, -8.629270777357258], {icon:leafletIcon} ).addTo(map);
+
+        // Mapa Esri_WorldGrayCanvas - Cinza
+        var Esri_WorldGrayCanvas = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+            maxZoom: 16
+        });
+
+        Esri_WorldGrayCanvas.addTo(map);
+
+    </script>
+
+</body>
+</html>

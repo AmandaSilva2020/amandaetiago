@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --cor-bg-principal: #F2F4F3;
+    --cor-primaria: #B59C58;
+    --cor-secundaria: #6A6A6A;
+    --cor-terciaria: #CCCCCC;
+    --font-titulos: 'EB Garamond', serif;
+    font-family: var(--font-titulos);
+}
+
+body{
+    background-color: var(--cor-bg-principal);
+}
+
+h1, h2, h3 {
+    color: var(--cor-primaria);
+    font-weight: 500;
+}
+
+p{
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--cor-primaria);
+}
+
+/* Site pensado para dispositivos com até 360px de largura */
+.cover{
+    background: url("../img/teste8.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+
+#main-container{
+    margin: 0 auto;
+    /* padding: 0 40px; */
+}
+
+#counter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    font-family: var(--font-titulos);
+    color: var(--cor-primaria);
+}
+
+.btn, #submit{
+    width: 100%;
+    background-color: var(--cor-primaria);
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.btn a, #submit{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+}
+
+#main-container{
+    width: 281px;
+}
+.cover{
+    background-position: center;
+    height: 100vh;
+}
+
+/* Seção Countdown */
+
+#counter {
+    line-height: 1.5;
+    font-size: 36px;
+}
+
+
+#counter h1{
+    padding-left: 10px;
+    letter-spacing: 10px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+#numDias{
+    padding-left: 40px;
+    letter-spacing: 40px;
+    font-weight: 700;
+    font-size: 64px;
+}
+
+#dias{
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.66em;
+    padding-left: 0.66em;
+}
+
+.tempo{
+    margin-top: 20px;
+    width: 100%;
+}
+
+#countdown {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#countdown div{
+    display: flex;
+    align-items: center;
+}
+
+#countdown div .data{
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+/* Separador */
+hr{
+    width: 6rem;
+    margin: 20px auto;
+}
+
+/* Seção História */
+.titulo-secao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.titulo-secao h1{
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--cor-primaria);
+    padding-bottom: 1px;
+    margin-bottom: 1px;
+    letter-spacing: 0.66rem;
+    padding-left: 0.66rem;
+    font-size: 24px;
+}
+
+/* Cards */
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card{
+    margin: auto;
+    width: 281px;
+}
+
+.imagem-card{
+    width: 281px;
+    height: 281px;
+    border-radius: 150px 150px 0 0;
+    contain: content;
+    border-bottom: 4px solid var(--cor-primaria);
+}
+
+.titulo-card{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--cor-primaria);
+}
+
+.titulo-card span{
+    color: var(--cor-secundaria);
+    text-align: center;
+    padding: 4px 0;
+    
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.card h3{
+    color: var(--cor-secundaria);
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+    letter-spacing: 0.05rem;
+}
+
+.card p{
+    text-align: center;
+}
+
+.card hr{
+    width: 3rem;
+}
+
+/* Seção Cerimónia e recepção */
+#logo-bosque{
+    position: relative;
+    width: 280px;
+    height: 109px;
+    margin: 20px 0;
+}
+
+.quinta{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#morada{
+    margin: 10px 0;
+}
+
+#morada p{
+    text-align: center;
+}
+
+#morada hr{
+    text-align: center;
+    width: 10px;
+}
+
+#morada div{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.material-symbols-outlined{
+    color: var(--cor-primaria);
+}
+
+#map {
+    height: 300px;
+    margin: 10px 0;
+}
+
+/* Seção formulário */
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+/* @media screen and (max-width: 600px){
+    
+} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media screen and (min-width: 600px) and (max-width: 768px){
+    .cover{
+        background-position: 50% 0%;
+        height: 75vh;
+    }
+} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media screen and (min-width: 768px){
+
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media screen and (min-width: 992px){
+
+} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1920px){
+    .cover{
+        background-size: cover;
+        height: 110vh;
+    }
+} */
+
