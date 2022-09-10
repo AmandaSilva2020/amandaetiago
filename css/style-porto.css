@@ -1,0 +1,58 @@
+.cover-porto{
+    background: url("../img/oporto.jpeg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+p{
+    margin: 20px;
+}
+
+.hoteis{
+    display: flex;
+    flex-direction: column;
+}
+
+.classificacao{
+    display: inline;
+    margin-right: 5px;
+}
+
+.classificacao-estrelas{
+    display: inline;
+}
+
+.cidade{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#more {
+    display: none;
+}
+
+#myBtn{
+    text-align: center;
+    color: var(--cor-primaria);
+    font-size: 18px;
+    border: 1px solid var(--cor-primaria);
+}
+
+.nome-hotel{
+    margin-top: 20px;
+    border-top: 2px solid var(--cor-primaria);
+    border-bottom: 2px solid var(--cor-primaria);
+    text-align: center;
+}
+
+.nome-hotel h2{
+    margin-bottom: 0;
+    font-size: 1.4em;
+}
