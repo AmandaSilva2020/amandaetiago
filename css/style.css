@@ -272,7 +272,6 @@ a{
 
 #numDias{
     width: 100%;
-    font-family: initial;
     padding-left: 50px;
     letter-spacing: 40px;
     font-weight: 700;
@@ -303,10 +302,6 @@ a{
 #countdown div{
     display: flex;
     align-items: center;
-}
-
-#horas, #minutos, #segundos{
-    font-family: initial;
 }
 
 #countdown div .data{
