@@ -40,8 +40,9 @@
                   but hey, it's pure CSS magic.
                   -->
                   <ul id="menu">
-                    <a href="porto.html"><li>Onde ficar no Porto?</li></a>
-                    <a href="vila-do-conde.html"><li>Onde ficar em Vila do Conde?</li></a>
+                    <a href="../index.html"><li>Home</li></a>
+                    <a href="porto.html"><li class="pag-ativa" style="line-height: 1.6rem;">Onde ficar <br> no Porto?</li></a>
+                    <a href="vila-do-conde.html"><li style="line-height: 1.6rem;">Onde ficar <br> em Vila do Conde?</li></a>
                     <a href="../index.html#rsvp"><li>Confirmar presença</li></a>
                   </ul>
                 </div>
@@ -55,26 +56,17 @@
             </div>
             <div class="sobre">
                 <p>
-                    A O Porto é um dos destinos turísticos mais antigos da Europa e a riqueza do seu património artístico, o Vinho do Porto, os vastos espaços dedicados ao lazer e a sua vida cultural são apenas alguns dos motivos que convidam a visitar a cidade. 
+                    O Porto é um dos destinos turísticos mais antigos da Europa e a riqueza do seu património artístico, o Vinho do Porto, os vastos espaços dedicados ao lazer e a sua vida cultural são apenas alguns dos motivos que convidam a visitar a cidade. 
                 </p> 
                 <p>
-                    Ao longo do rio e do mar a cidade desdobra-se em paisagens encantadoras, esplanadas convidativas e o prazer do ar livre, que os espaços verdes complementam. Mas descobrir o Porto é ir ao encontro de muitas surpresas. Mantendo o seu caráter hospitaleiro e conservador, a cidade é, também, contemporânea e criativa, e de tudo isto dão testemunho as ruas, a arquitetura, os museus, os espaços de lazer, as esplanadas e as zonas comerciais, das mais tradicionais a espaços modernos e exclusivos.<span id="dots">...</span>
+                    Ao longo do rio e do mar a cidade desdobra-se em paisagens encantadoras, esplanadas convidativas e o prazer do ar livre, que os espaços verdes complementam. Mas descobrir o Porto é ir ao encontro de muitas surpresas. 
                 </p>
-                <div id="more">
-                    <p>
-                        O Centro Histórico do Porto é Património Cultural da Humanidade desde 1996 e o seu enquadramento paisagístico e o traçado sinuoso das suas ruas conferem-lhe uma beleza singular.
-                    </p>
-                    <p> 
-                        Na cidade o Vinho do Porto está presente de várias formas e sentidos: pode ser conhecido e experimentado, mas jamais ignorado, ou esquecido.
-                    </p>
-                    <p> 
-                        Testemunha de uma história feita do cruzamento de culturas em sucessivas ocupações, várias vezes invadida e cercada, mas sempre Invicta, a cidade do Porto é património vivo, dinâmico, que se regenera e se reinventa, mantendo sempre o seu caráter, ou não fosse alicerçado em granito e por conseguinte, inabalável.</span>
-                    </p>
-                </div>
+                <p>
+                    Para conhecer algumas dicas do que fazer e onde ir no Porto, indicamos o site <a href="https://visitporto.travel/pt-PT/home#/" target="_blank">Visit Porto</a>
+                </p>
             </div>
-            <a onclick="myFunction()" id="myBtn">Ver mais</a>
         </div>
-        <div class="hoteis">
+        <div class="hoteis" style="margin-bottom: 40px;">
             <!-- Hotel 1 - ABC Hotel Porto -->
             <div class="card-casamento">
                 <div class="nome-hotel">
@@ -270,22 +262,5 @@
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        function myFunction() {
-            var dots = document.getElementById("dots");
-            var moreText = document.getElementById("more");
-            var btnText = document.getElementById("myBtn");
-
-            if (dots.style.display === "none") {
-                dots.style.display = "inline";
-                btnText.innerHTML = "Ver mais";
-                moreText.style.display = "none";
-            } else {
-                dots.style.display = "none";
-                btnText.innerHTML = "Ver menos";
-                moreText.style.display = "inline";
-            }
-        }
-    </script>
 </body>
 </html>

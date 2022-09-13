@@ -1,3 +1,18 @@
+@font-face {
+    font-family: DIN-Condensed;
+    src: url(../assets/DINCond-MediumAlternate.otf);
+}
+
+@font-face {
+    font-family: DINPro-Light;
+    src: url(../assets/DINPro-Light.otf);
+}
+
+@font-face {
+    font-family: DINPro-Medium;
+    src: url(../assets/DINPro-Medium.otf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +22,7 @@
     --cor-secundaria: #6A6A6A;
     --cor-terciaria: #CCCCCC;
     --font-titulos: 'EB Garamond', serif;
+    --font-corpo: 'DINPro-Light', sans-serif;
     font-family: var(--font-titulos);
 }
 
@@ -19,11 +35,17 @@ h1, h2, h3 {
     font-weight: 500;
 }
 
-p{
-    font-size: 18px;
+.texto-timer{
+    font-family: 'DIN-Condensed', serif;
+}
+
+p, label, input, textarea, .formulario span{
+    font-family: var(--font-corpo);
+    font-size: 16px;
 }
 
 a{
+    font-family: var(--font-corpo);
     text-decoration: none;
     color: var(--cor-primaria);
 }
@@ -48,6 +70,15 @@ a{
   color: #232323;
   
   transition: color 0.3s ease;
+}
+
+#menuToggle a li{
+    font-family: var(--font-corpo);
+}
+
+#menuToggle a .pag-ativa{
+    font-family: 'DINPro-Medium', sans-serif;
+    color: var(--cor-primaria);
 }
 
 #menuToggle a:hover
@@ -84,7 +115,7 @@ a{
   margin-bottom: 5px;
   position: relative;
   
-  background: #cdcdcd;
+  background: var(--cor-primaria);
   border-radius: 3px;
   
   z-index: 1;
@@ -194,6 +225,7 @@ a{
 }
 
 .btn-casamento, #submit{
+    text-transform: uppercase;
     width: 100%;
     background-color: var(--cor-primaria);
     border-radius: 50px;
@@ -205,7 +237,10 @@ a{
 }
 
 .btn-casamento a, #submit{
-    font-size: 18px;
+    font-family: var(--font-corpo);
+    letter-spacing: 3px;
+    padding-left: 3px;
+    font-size: 15px;
     color: #fff;
     text-decoration: none;
     border: none;
@@ -214,6 +249,7 @@ a{
 #main-container{
     width: 281px;
 }
+
 .cover{
     background-position: center;
     height: 100vh;
@@ -228,39 +264,49 @@ a{
 
 
 #counter h1{
-    padding-left: 10px;
-    letter-spacing: 10px;
+    padding-left: 12px;
+    letter-spacing: 12px;
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 #numDias{
-    padding-left: 40px;
+    width: 100%;
+    font-family: initial;
+    padding-left: 50px;
     letter-spacing: 40px;
     font-weight: 700;
     font-size: 64px;
+    border-top: 1px solid var(--cor-primaria);
+    border-bottom: 1px solid var(--cor-primaria);
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 #dias{
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 0.66em;
-    padding-left: 0.66em;
+    font-size: 28px;
+    letter-spacing: 12px;
+    padding-left: 12px;
 }
 
 .tempo{
-    margin-top: 20px;
+    margin-top: 5px;
     width: 100%;
 }
 
 #countdown {
     display: flex;
     justify-content: space-evenly;
+    border-top: 1px solid var(--cor-primaria);
 }
 
 #countdown div{
     display: flex;
     align-items: center;
+}
+
+#horas, #minutos, #segundos{
+    font-family: initial;
 }
 
 #countdown div .data{
@@ -275,6 +321,9 @@ hr{
 }
 
 /* Seção História */
+#historia{
+    margin-top: 30px;
+}
 .titulo-secao{
     display: flex;
     flex-direction: column;
@@ -301,7 +350,7 @@ hr{
 }
 
 .card{
-    margin: auto;
+    margin: auto auto 20px auto;
     width: 281px;
 }
 
@@ -333,11 +382,13 @@ hr{
 }
 
 .card h3{
-    color: var(--cor-secundaria);
+    color: var(--cor-primaria);
     text-align: center;
+    text-transform: uppercase;
     font-size: 16px;
-    padding: 10px 0;
-    letter-spacing: 0.05rem;
+    padding: 10px 0 5px 0;
+    letter-spacing: 3px;
+    padding-left: 3px;
 }
 
 .card p{
@@ -353,7 +404,7 @@ hr{
     position: relative;
     width: 280px;
     height: 109px;
-    margin: 20px 0;
+    margin: 0 0 20px 0;
 }
 
 .quinta{
@@ -373,6 +424,7 @@ hr{
 #morada hr{
     text-align: center;
     width: 10px;
+    margin: 10px auto;
 }
 
 #morada div{
@@ -390,10 +442,20 @@ hr{
     margin: 10px 0;
 }
 
+.leaflet-popup-content{
+    font-family: var(--font-corpo);
+}
+
+.leaflet-popup-content b{
+    font-family: 'DINPro-Medium', sans-serif;
+    color: var(--cor-primaria);
+}
+
 /* Seção formulário */
 .formulario{
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
 }
 
 .formulario div{
@@ -402,6 +464,15 @@ hr{
     margin-bottom: 10px;
 }
 
+.formulario input, .formulario textarea, .formulario select{
+    border: 1px solid var(--cor-primaria);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.formulario span{
+    color: var(--cor-primaria);
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media screen and (min-width: 600px) and (max-width: 767px){
@@ -437,14 +508,14 @@ hr{
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media screen and (min-width: 768px){
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media screen and (min-width: 992px){
+/* @media screen and (min-width: 768px){
 
 } */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px){
+
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /* @media only screen and (min-width: 1920px){
