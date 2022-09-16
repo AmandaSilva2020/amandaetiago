@@ -1,545 +1,549 @@
 @font-face {
-    font-family: DIN-Condensed;
-    src: url(../assets/DINCond-MediumAlternate.otf);
-  }
-  
-  @font-face {
-    font-family: DINPro-Light;
-    src: url(../assets/DINPro-Light.otf);
-  }
-  
-  @font-face {
-    font-family: DINPro-Medium;
-    src: url(../assets/DINPro-Medium.otf);
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    --cor-bg-principal: #f2f4f3;
-    --cor-primaria: #b59c58;
-    --cor-secundaria: #6a6a6a;
-    --cor-terciaria: #cccccc;
-    --font-titulos: "EB Garamond", serif;
-    --font-corpo: "DINPro-Light", sans-serif;
-    font-family: var(--font-titulos);
-  }
-  
-  body {
-    background-color: var(--cor-bg-principal);
-  }
-  
-  h1,
-  h2,
-  h3 {
+  font-family: DIN-Condensed;
+  src: url(../assets/DINCond-MediumAlternate.otf);
+}
+
+@font-face {
+  font-family: DINPro-Light;
+  src: url(../assets/DINPro-Light.otf);
+}
+
+@font-face {
+  font-family: DINPro-Medium;
+  src: url(../assets/DINPro-Medium.otf);
+}
+
+@font-face {
+  font-family: TNR-Bold;
+  src: url(../assets/times-new-roman-grassetto.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --cor-bg-principal: #f2f4f3;
+  --cor-primaria: #b59c58;
+  --cor-secundaria: #6a6a6a;
+  --cor-terciaria: #cccccc;
+  --font-titulos: "EB Garamond", serif;
+  --font-corpo: "DINPro-Light", sans-serif;
+  font-family: var(--font-titulos);
+}
+
+body {
+  background-color: var(--cor-bg-principal);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--cor-primaria);
+  font-weight: 500;
+}
+
+.texto-timer {
+  font-family: "DIN-Condensed", serif;
+}
+
+p,
+label,
+input,
+textarea,
+.formulario span {
+  font-family: var(--font-corpo);
+  font-size: 16px;
+}
+
+a {
+  font-family: var(--font-corpo);
+  text-decoration: none;
+  color: var(--cor-primaria);
+}
+
+/* menu hamb novo */
+.hamburger-menu {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  margin: 2rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+}
+.bar-top,
+.bar-middle,
+.bar-bottom {
+  z-index: 3;
+  height: 5px;
+  background: var(--cor-primaria);
+  border-radius: 5px;
+  margin: 3px 0;
+}
+
+#menu a {
+  text-decoration: none;
+  color: #232323;
+
+  transition: color 0.3s ease;
+}
+
+#menu a li {
+  font-family: var(--font-corpo);
+}
+
+#menu a .pag-ativa {
+  font-family: "DINPro-Medium", sans-serif;
+  color: var(--cor-primaria);
+}
+
+#menu a:hover {
+  color: var(--cor-primaria);
+}
+
+#menu input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: var(--cor-primaria);
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  display: none;
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -200px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+/* Site pensado para dispositivos com até 360px de largura */
+.cover {
+  background: url("../img/Cover_AmandaTiago_Desktop.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+}
+
+.cover-home-desk{
+  display: block;
+}
+
+.cover-home-mobile{
+  display: none;
+}
+
+#main-container {
+    width: 60%;
+  margin: 0 auto;
+  /* padding: 0 40px; */
+}
+
+#counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  font-family: var(--font-titulos);
+  color: var(--cor-primaria);
+}
+
+.btn-casamento,
+#submit {
+  text-transform: uppercase;
+  background-color: var(--cor-primaria);
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+.btn-casamento{
+    width: 100%;
+}
+
+.btn-casamento a,
+#submit {
+  font-family: var(--font-corpo);
+  letter-spacing: 3px;
+  padding-left: 3px;
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+}
+
+.cover {
+  background-position: center;
+  height: 100vh;
+}
+
+/* Seção Countdown */
+
+#counter {
+  line-height: 1.5;
+  font-size: 36px;
+  width: 281px;
+    margin: auto;
+}
+
+#counter h1 {
+  padding-left: 12px;
+  letter-spacing: 12px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+#numDias {
+  font-family: "TNR-Bold", serif;
+  width: 100%;
+  padding-left: 50px;
+  letter-spacing: 40px;
+  font-weight: 700;
+  font-size: 64px;
+  border-top: 1px solid var(--cor-primaria);
+  border-bottom: 1px solid var(--cor-primaria);
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#horas, #minutos, #segundos {
+  font-family: "TNR-Bold", serif;
+}
+
+#dias {
+  font-size: 28px;
+  letter-spacing: 12px;
+  padding-left: 12px;
+}
+
+.tempo {
+  margin-top: 5px;
+  width: 100%;
+}
+
+#countdown {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid var(--cor-primaria);
+}
+
+#countdown div {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+#countdown div .data {
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+/* Separador */
+hr {
+  width: 6rem;
+  margin: 20px auto;
+}
+
+.divisoria{
+    margin: 20px auto 60px auto;
+}
+
+/* Seção História */
+#historia {
+  margin-top: 30px;
+}
+.titulo-secao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.titulo-secao h1 {
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--cor-primaria);
+  padding-bottom: 1px;
+  margin-bottom: 1px;
+  letter-spacing: 0.66rem;
+  padding-left: 0.66rem;
+  font-size: 24px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.card {
+  margin: auto auto 20px auto;
+  width: 281px;
+}
+
+.imagem-card {
+  width: 281px;
+  height: 281px;
+  border-radius: 150px 150px 0 0;
+  contain: content;
+  border-bottom: 4px solid var(--cor-primaria);
+}
+
+.imagem-card img {
+  height: inherit;
+}
+
+.titulo-card {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--cor-primaria);
+}
+
+.titulo-card span {
+  color: var(--cor-secundaria);
+  text-align: center;
+  padding: 4px 0;
+
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.card h3 {
+  color: var(--cor-primaria);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 10px 0 5px 0;
+  letter-spacing: 3px;
+  padding-left: 3px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card hr {
+  width: 3rem;
+}
+
+/* Seção Cerimónia e recepção */
+#cerimonia{
+    margin-top: 40px;
+}
+#logo-bosque {
+  position: relative;
+  width: 280px;
+  height: 109px;
+  margin: 0 0 20px 0;
+}
+
+.quinta {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 281px;
+    margin: auto;
+}
+
+.col-quinta {
+    width: 100%;
+}
+
+#morada {
+  margin: 10px 0;
+}
+
+#morada p {
+  text-align: center;
+}
+
+#morada hr {
+  text-align: center;
+  width: 10px;
+  margin: 10px auto;
+}
+
+#morada div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#link-quinta{
+  text-decoration: underline;
+}
+
+.material-symbols-outlined {
+  color: var(--cor-primaria);
+}
+
+#map {
+  height: 300px;
+  margin: 10px 0;
+}
+
+.leaflet-popup-content {
+  font-family: var(--font-corpo);
+}
+
+.leaflet-popup-content b {
+  font-family: "DINPro-Medium", sans-serif;
+  color: var(--cor-primaria);
+}
+
+/* Seção formulário */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.formulario div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+  border: 1px solid var(--cor-primaria);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.formulario span {
+  color: var(--cor-primaria);
+}
+
+#submit{
+    width: 400px;
+    margin: 20px auto;
+}
+
+.euro_cheio{
+    font-weight: bold;
     color: var(--cor-primaria);
-    font-weight: 500;
+}
+
+.card-casamento{
+    padding-bottom: 20px;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+    .cover{
+        background-size: cover;
+        height: 110vh;
+    }
+    .cards{
+        flex-direction: row;
+        gap: 6em;
+        justify-content: space-evenly;
+        padding: 10px 0;
+    }
+    .card{
+  height: 530px;
+    }
+    .quinta{
+        flex-direction: row;
+    width: 100%;
+    }
+    .col-quinta{
+        margin: auto;
+    }
+    #logo-bosque{
+        margin: auto;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (max-width: 1200px) {
+  #main-container {
+    /* width: 520px; */
+    width: 281px;
   }
-  
-  .texto-timer {
-    font-family: "DIN-Condensed", serif;
+  #submit {
+    width: 100%;
   }
-  
-  p,
-  label,
-  input,
-  textarea,
-  .formulario span {
-    font-family: var(--font-corpo);
-    font-size: 16px;
-  }
-  
-  a {
-    font-family: var(--font-corpo);
-    text-decoration: none;
-    color: var(--cor-primaria);
-  }
-  
-  /* menu hamb novo */
-  .hamburger-menu {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    margin: 2rem;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    height: 2.5rem;
-    width: 2.5rem;
-    cursor: pointer;
-  }
-  .bar-top,
-  .bar-middle,
-  .bar-bottom {
-    z-index: 3;
-    height: 5px;
-    background: var(--cor-primaria);
-    border-radius: 5px;
-    margin: 3px 0;
-  }
-  
-  #menu a {
-    text-decoration: none;
-    color: #232323;
-  
-    transition: color 0.3s ease;
-  }
-  
-  #menu a li {
-    font-family: var(--font-corpo);
-  }
-  
-  #menu a .pag-ativa {
-    font-family: "DINPro-Medium", sans-serif;
-    color: var(--cor-primaria);
-  }
-  
-  #menu a:hover {
-    color: var(--cor-primaria);
-  }
-  
-  #menu input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-  
-    cursor: pointer;
-  
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
-  
-    -webkit-touch-callout: none;
-  }
-  
-  /*
-   * Just a quick hamburger
-   */
-  #menuToggle span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-  
-    background: var(--cor-primaria);
-    border-radius: 3px;
-  
-    z-index: 1;
-  
-    transform-origin: 4px 0px;
-  
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-  }
-  
-  
-  
-  /*
-   * Make this absolute positioned
-   * at the top left of the screen
-   */
-  #menu {
-    display: none;
-    position: absolute;
-    width: 300px;
-    margin: -100px 0 0 -200px;
-    padding: 50px;
-    padding-top: 125px;
-    background: #ededed;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  #menu li {
-    padding: 10px 0;
-    font-size: 22px;
-  }
-  
-  /*
-   * And let's slide it in from the left
-   */
-  #menuToggle input:checked ~ ul {
-    transform: none;
-  }
-  
-  /* Site pensado para dispositivos com até 360px de largura */
-  .cover {
-    background: url("../img/Cover_AmandaTiago_Desktop.jpg") no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 90vh;
-  }
-  
   .cover-home-desk{
-    display: block;
+    display: none;
   }
   
   .cover-home-mobile{
-    display: none;
-  }
-  
-  #main-container {
-      width: 60%;
-    margin: 0 auto;
-    /* padding: 0 40px; */
-  }
-  
-  #counter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    font-family: var(--font-titulos);
-    color: var(--cor-primaria);
-  }
-  
-  .btn-casamento,
-  #submit {
-    text-transform: uppercase;
-    background-color: var(--cor-primaria);
-    border-radius: 50px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    padding: 10px 20px;
-    margin-top: 30px;
-  }
-  .btn-casamento{
-      width: 100%;
-  }
-  
-  .btn-casamento a,
-  #submit {
-    font-family: var(--font-corpo);
-    letter-spacing: 3px;
-    padding-left: 3px;
-    font-size: 15px;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-  }
-  
-  .cover {
-    background-position: center;
-    height: 100vh;
-  }
-  
-  /* Seção Countdown */
-  
-  #counter {
-    line-height: 1.5;
-    font-size: 36px;
-    width: 281px;
-      margin: auto;
-  }
-  
-  #counter h1 {
-    padding-left: 12px;
-    letter-spacing: 12px;
-    font-size: 32px;
-    font-weight: 500;
-  }
-  
-  #numDias {
-    font-family: 'Times New Roman', Times, serif;
-    width: 100%;
-    padding-left: 50px;
-    letter-spacing: 40px;
-    font-weight: 700;
-    font-size: 64px;
-    border-top: 1px solid var(--cor-primaria);
-    border-bottom: 1px solid var(--cor-primaria);
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-  
-  #horas, #minutos, #segundos {
-    font-family: 'Times New Roman', Times, serif;
-  }
-  
-  #dias {
-    font-size: 28px;
-    letter-spacing: 12px;
-    padding-left: 12px;
-  }
-  
-  .tempo {
-    margin-top: 5px;
-    width: 100%;
-  }
-  
-  #countdown {
-    display: flex;
-    justify-content: space-evenly;
-    border-top: 1px solid var(--cor-primaria);
-  }
-  
-  #countdown div {
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
-  }
-  
-  #countdown div .data {
-    font-size: 20px;
-    padding-left: 10px;
-  }
-  
-  /* Separador */
-  hr {
-    width: 6rem;
-    margin: 20px auto;
-  }
-  
-  .divisoria{
-      margin: 20px auto 60px auto;
-  }
-  
-  /* Seção História */
-  #historia {
-    margin-top: 30px;
-  }
-  .titulo-secao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-  
-  .titulo-secao h1 {
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--cor-primaria);
-    padding-bottom: 1px;
-    margin-bottom: 1px;
-    letter-spacing: 0.66rem;
-    padding-left: 0.66rem;
-    font-size: 24px;
-  }
-  
-  /* Cards */
-  .cards {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 10px;
-  }
-  
-  .card {
-    margin: auto auto 20px auto;
-    width: 281px;
-  }
-  
-  .imagem-card {
-    width: 281px;
-    height: 281px;
-    border-radius: 150px 150px 0 0;
-    contain: content;
-    border-bottom: 4px solid var(--cor-primaria);
-  }
-  
-  .imagem-card img {
-    height: inherit;
-  }
-  
-  .titulo-card {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid var(--cor-primaria);
-  }
-  
-  .titulo-card span {
-    color: var(--cor-secundaria);
-    text-align: center;
-    padding: 4px 0;
-  
-    text-transform: uppercase;
-    font-size: 20px;
-  }
-  
-  .card h3 {
-    color: var(--cor-primaria);
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 16px;
-    padding: 10px 0 5px 0;
-    letter-spacing: 3px;
-    padding-left: 3px;
-  }
-  
-  .card p {
-    text-align: center;
-  }
-  
-  .card hr {
-    width: 3rem;
-  }
-  
-  /* Seção Cerimónia e recepção */
-  #cerimonia{
-      margin-top: 40px;
-  }
-  #logo-bosque {
-    position: relative;
-    width: 280px;
-    height: 109px;
-    margin: 0 0 20px 0;
-  }
-  
-  .quinta {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    width: 281px;
-      margin: auto;
-  }
-  
-  .col-quinta {
-      width: 100%;
-  }
-  
-  #morada {
-    margin: 10px 0;
-  }
-  
-  #morada p {
-    text-align: center;
-  }
-  
-  #morada hr {
-    text-align: center;
-    width: 10px;
-    margin: 10px auto;
-  }
-  
-  #morada div {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    display: block;
   }
 
-  #link-quinta{
-    text-decoration: underline;
+  .hamburger-menu {
+    top: 10px;
+    right: 30px;
+    margin: 1rem;
+    justify-content: flex-start;
+    width: 2rem;
   }
-  
-  .material-symbols-outlined {
-    color: var(--cor-primaria);
+
+  .bar-top, .bar-middle, .bar-bottom {
+    height: 3px;
   }
-  
-  #map {
-    height: 300px;
-    margin: 10px 0;
-  }
-  
-  .leaflet-popup-content {
-    font-family: var(--font-corpo);
-  }
-  
-  .leaflet-popup-content b {
-    font-family: "DINPro-Medium", sans-serif;
-    color: var(--cor-primaria);
-  }
-  
-  /* Seção formulário */
-  .formulario {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-  }
-  
-  .formulario div {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-  
-  .formulario input,
-  .formulario textarea,
-  .formulario select {
-    border: 1px solid var(--cor-primaria);
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  
-  .formulario span {
-    color: var(--cor-primaria);
-  }
-  
-  #submit{
-      width: 400px;
-      margin: 20px auto;
-  }
-  
-  .euro_cheio{
-      font-weight: bold;
-      color: var(--cor-primaria);
-  }
-  
-  .card-casamento{
-      padding-bottom: 20px;
-  }
-  
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px){
-      .cover{
-          background-size: cover;
-          height: 110vh;
-      }
-      .cards{
-          flex-direction: row;
-          gap: 6em;
-          justify-content: space-evenly;
-          padding: 10px 0;
-      }
-      .card{
-    height: 530px;
-      }
-      .quinta{
-          flex-direction: row;
-      width: 100%;
-      }
-      .col-quinta{
-          margin: auto;
-      }
-      #logo-bosque{
-          margin: auto;
-      }
-  }
-  
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media screen and (max-width: 1200px) {
-    #main-container {
-      /* width: 520px; */
-      width: 281px;
-    }
-    #submit {
-      width: 100%;
-    }
-    .cover-home-desk{
-      display: none;
-    }
-    
-    .cover-home-mobile{
-      display: block;
-    }
-  
-    .hamburger-menu {
-      top: 10px;
-      right: 30px;
-      margin: 1rem;
-      justify-content: flex-start;
-      width: 2rem;
-    }
-  
-    .bar-top, .bar-middle, .bar-bottom {
-      height: 3px;
-    }
-  }
-  
-  
-  
-  
+}
+
+
+
