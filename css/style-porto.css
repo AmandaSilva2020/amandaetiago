@@ -1,5 +1,5 @@
-.cover-viladoconde{
-    background: url("../img/VConde.jpeg") no-repeat;
+.cover-porto{
+    background: url("../img/oporto.jpeg") no-repeat;
     background-position: center;
     background-size: cover;
     height: 90vh;
@@ -78,3 +78,4 @@ p{
       width: 281px;
     }
   }
+  
