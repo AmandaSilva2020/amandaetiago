@@ -1,232 +1,218 @@
 @font-face {
     font-family: DIN-Condensed;
     src: url(../assets/DINCond-MediumAlternate.otf);
-}
-
-@font-face {
+  }
+  
+  @font-face {
     font-family: DINPro-Light;
     src: url(../assets/DINPro-Light.otf);
-}
-
-@font-face {
+  }
+  
+  @font-face {
     font-family: DINPro-Medium;
     src: url(../assets/DINPro-Medium.otf);
-}
-
-*{
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --cor-bg-principal: #F2F4F3;
-    --cor-primaria: #B59C58;
-    --cor-secundaria: #6A6A6A;
-    --cor-terciaria: #CCCCCC;
-    --font-titulos: 'EB Garamond', serif;
-    --font-corpo: 'DINPro-Light', sans-serif;
+    --cor-bg-principal: #f2f4f3;
+    --cor-primaria: #b59c58;
+    --cor-secundaria: #6a6a6a;
+    --cor-terciaria: #cccccc;
+    --font-titulos: "EB Garamond", serif;
+    --font-corpo: "DINPro-Light", sans-serif;
     font-family: var(--font-titulos);
-}
-
-body{
+  }
+  
+  body {
     background-color: var(--cor-bg-principal);
-}
-
-h1, h2, h3 {
+  }
+  
+  h1,
+  h2,
+  h3 {
     color: var(--cor-primaria);
     font-weight: 500;
-}
-
-.texto-timer{
-    font-family: 'DIN-Condensed', serif;
-}
-
-p, label, input, textarea, .formulario span{
+  }
+  
+  .texto-timer {
+    font-family: "DIN-Condensed", serif;
+  }
+  
+  p,
+  label,
+  input,
+  textarea,
+  .formulario span {
     font-family: var(--font-corpo);
     font-size: 16px;
-}
-
-a{
+  }
+  
+  a {
     font-family: var(--font-corpo);
     text-decoration: none;
     color: var(--cor-primaria);
-}
-
-/* Nav */
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
+  }
   
-  z-index: 1;
+  /* Nav */
+  /* #menuToggle {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+  } */
   
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle a
-{
-  text-decoration: none;
-  color: #232323;
+  /* menu hamb novo */
+  .hamburger-menu {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    margin: 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+  }
+  .bar-top,
+  .bar-middle,
+  .bar-bottom {
+    z-index: 3;
+    height: 5px;
+    background: var(--cor-primaria);
+    border-radius: 5px;
+    margin: 3px 0;
+    transform-origin: left;
+    transition: all 0.5s;
+  }
   
-  transition: color 0.3s ease;
-}
-
-#menuToggle a li{
+  #menu a {
+    text-decoration: none;
+    color: #232323;
+  
+    transition: color 0.3s ease;
+  }
+  
+  #menu a li {
     font-family: var(--font-corpo);
-}
-
-#menuToggle a .pag-ativa{
-    font-family: 'DINPro-Medium', sans-serif;
+  }
+  
+  #menu a .pag-ativa {
+    font-family: "DINPro-Medium", sans-serif;
     color: var(--cor-primaria);
-}
-
-#menuToggle a:hover
-{
-  color: tomato;
-}
-
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
+  }
   
-  cursor: pointer;
+  #menu a:hover {
+    color: var(--cor-primaria);
+  }
   
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  #menu input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
   
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
+    cursor: pointer;
   
-  background: var(--cor-primaria);
-  border-radius: 3px;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
   
-  z-index: 1;
+    -webkit-touch-callout: none;
+  }
   
-  transform-origin: 4px 0px;
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
   
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
+    background: var(--cor-primaria);
+    border-radius: 3px;
   
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
+    z-index: 1;
   
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+    transform-origin: 4px 0px;
   
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
-
-/* Site pensado para dispositivos com até 360px de largura */
-.cover{
-    background: url("../img/teste8.jpg") no-repeat;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+  
+  
+  
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu {
+    display: none;
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -200px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+  
+  /* Site pensado para dispositivos com até 360px de largura */
+  .cover {
+    background: url("../img/Cover_AmandaTiago_Desktop.jpg") no-repeat;
     background-position: center;
     background-size: cover;
     height: 90vh;
-}
-
-#main-container{
+  }
+  
+  .cover-home-desk{
+    display: block;
+  }
+  
+  .cover-home-mobile{
+    display: none;
+  }
+  
+  #main-container {
+      width: 60%;
     margin: 0 auto;
     /* padding: 0 40px; */
-}
-
-#counter{
+  }
+  
+  #counter {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
     font-family: var(--font-titulos);
     color: var(--cor-primaria);
-}
-
-.btn-casamento, #submit{
+  }
+  
+  .btn-casamento,
+  #submit {
     text-transform: uppercase;
-    width: 100%;
     background-color: var(--cor-primaria);
     border-radius: 50px;
     text-align: center;
@@ -234,9 +220,13 @@ a{
     justify-content: center;
     padding: 10px 20px;
     margin-top: 20px;
-}
-
-.btn-casamento a, #submit{
+  }
+  .btn-casamento{
+      width: 100%;
+  }
+  
+  .btn-casamento a,
+  #submit {
     font-family: var(--font-corpo);
     letter-spacing: 3px;
     padding-left: 3px;
@@ -244,33 +234,30 @@ a{
     color: #fff;
     text-decoration: none;
     border: none;
-}
-
-#main-container{
-    width: 281px;
-}
-
-.cover{
+  }
+  
+  .cover {
     background-position: center;
     height: 100vh;
-}
-
-/* Seção Countdown */
-
-#counter {
+  }
+  
+  /* Seção Countdown */
+  
+  #counter {
     line-height: 1.5;
     font-size: 36px;
-}
-
-
-#counter h1{
+    width: 281px;
+      margin: auto;
+  }
+  
+  #counter h1 {
     padding-left: 12px;
     letter-spacing: 12px;
     font-size: 36px;
     font-weight: 500;
-}
-
-#numDias{
+  }
+  
+  #numDias {
     width: 100%;
     padding-left: 50px;
     letter-spacing: 40px;
@@ -280,54 +267,58 @@ a{
     border-bottom: 1px solid var(--cor-primaria);
     margin-bottom: 5px;
     margin-top: 5px;
-}
-
-#dias{
+  }
+  
+  #dias {
     font-size: 28px;
     letter-spacing: 12px;
     padding-left: 12px;
-}
-
-.tempo{
+  }
+  
+  .tempo {
     margin-top: 5px;
     width: 100%;
-}
-
-#countdown {
+  }
+  
+  #countdown {
     display: flex;
     justify-content: space-evenly;
     border-top: 1px solid var(--cor-primaria);
-}
-
-#countdown div{
+  }
+  
+  #countdown div {
     display: flex;
     align-items: center;
-}
-
-#countdown div .data{
+  }
+  
+  #countdown div .data {
     font-size: 20px;
     padding-left: 10px;
-}
-
-/* Separador */
-hr{
+  }
+  
+  /* Separador */
+  hr {
     width: 6rem;
     margin: 20px auto;
-}
-
-/* Seção História */
-#historia{
+  }
+  
+  .divisoria{
+      margin: 20px auto 60px auto;
+  }
+  
+  /* Seção História */
+  #historia {
     margin-top: 30px;
-}
-.titulo-secao{
+  }
+  .titulo-secao {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
     margin-bottom: 20px;
-}
-
-.titulo-secao h1{
+  }
+  
+  .titulo-secao h1 {
     text-transform: uppercase;
     border-bottom: 1px solid var(--cor-primaria);
     padding-bottom: 1px;
@@ -335,48 +326,49 @@ hr{
     letter-spacing: 0.66rem;
     padding-left: 0.66rem;
     font-size: 24px;
-}
-
-/* Cards */
-.cards{
+  }
+  
+  /* Cards */
+  .cards {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-.card{
+    padding-top: 10px;
+  }
+  
+  .card {
     margin: auto auto 20px auto;
     width: 281px;
-}
-
-.imagem-card{
+  }
+  
+  .imagem-card {
     width: 281px;
     height: 281px;
     border-radius: 150px 150px 0 0;
     contain: content;
     border-bottom: 4px solid var(--cor-primaria);
-}
-
-.imagem-card img{
+  }
+  
+  .imagem-card img {
     height: inherit;
-}
-
-.titulo-card{
+  }
+  
+  .titulo-card {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid var(--cor-primaria);
-}
-
-.titulo-card span{
+  }
+  
+  .titulo-card span {
     color: var(--cor-secundaria);
     text-align: center;
     padding: 4px 0;
-    
+  
     text-transform: uppercase;
     font-size: 20px;
-}
-
-.card h3{
+  }
+  
+  .card h3 {
     color: var(--cor-primaria);
     text-align: center;
     text-transform: uppercase;
@@ -384,139 +376,161 @@ hr{
     padding: 10px 0 5px 0;
     letter-spacing: 3px;
     padding-left: 3px;
-}
-
-.card p{
+  }
+  
+  .card p {
     text-align: center;
-}
-
-.card hr{
+  }
+  
+  .card hr {
     width: 3rem;
-}
-
-/* Seção Cerimónia e recepção */
-#logo-bosque{
+  }
+  
+  /* Seção Cerimónia e recepção */
+  #cerimonia{
+      margin-top: 40px;
+  }
+  #logo-bosque {
     position: relative;
     width: 280px;
     height: 109px;
     margin: 0 0 20px 0;
-}
-
-.quinta{
+  }
+  
+  .quinta {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-}
-
-#morada{
+    width: 281px;
+      margin: auto;
+  }
+  
+  .col-quinta {
+      width: 100%;
+  }
+  
+  #morada {
     margin: 10px 0;
-}
-
-#morada p{
+  }
+  
+  #morada p {
     text-align: center;
-}
-
-#morada hr{
+  }
+  
+  #morada hr {
     text-align: center;
     width: 10px;
     margin: 10px auto;
-}
-
-#morada div{
+  }
+  
+  #morada div {
     display: flex;
     justify-content: center;
     gap: 10px;
-}
-
-.material-symbols-outlined{
+  }
+  
+  .material-symbols-outlined {
     color: var(--cor-primaria);
-}
-
-#map {
+  }
+  
+  #map {
     height: 300px;
     margin: 10px 0;
-}
-
-.leaflet-popup-content{
+  }
+  
+  .leaflet-popup-content {
     font-family: var(--font-corpo);
-}
-
-.leaflet-popup-content b{
-    font-family: 'DINPro-Medium', sans-serif;
+  }
+  
+  .leaflet-popup-content b {
+    font-family: "DINPro-Medium", sans-serif;
     color: var(--cor-primaria);
-}
-
-/* Seção formulário */
-.formulario{
+  }
+  
+  /* Seção formulário */
+  .formulario {
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
-}
-
-.formulario div{
+  }
+  
+  .formulario div {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-}
-
-.formulario input, .formulario textarea, .formulario select{
+  }
+  
+  .formulario input,
+  .formulario textarea,
+  .formulario select {
     border: 1px solid var(--cor-primaria);
     margin-top: 5px;
     margin-bottom: 5px;
-}
-
-.formulario span{
+  }
+  
+  .formulario span {
     color: var(--cor-primaria);
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media screen and (min-width: 600px) and (max-width: 767px){
+  }
+  
+  #submit{
+      width: 400px;
+      margin: 20px auto;
+  }
+  
+  .euro_cheio{
+      font-weight: bold;
+      color: var(--cor-primaria);
+  }
+  
+  .card-casamento{
+      padding-bottom: 20px;
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px){
+      .cover{
+          background-size: cover;
+          height: 110vh;
+      }
+      .cards{
+          flex-direction: row;
+          gap: 6em;
+          justify-content: space-evenly;
+          padding: 10px 0;
+      }
+      .card{
+    height: 530px;
+      }
+      .quinta{
+          flex-direction: row;
+      width: 100%;
+      }
+      .col-quinta{
+          margin: auto;
+      }
+      #logo-bosque{
+          margin: auto;
+      }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media screen and (max-width: 1200px) {
     #main-container {
-        width: 520px;
+      /* width: 520px; */
+      width: 281px;
     }
-
-    .titulo-secao {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
-        margin-bottom: 20px;
+    #submit {
+      width: 100%;
     }
-
-    .card {
-        margin: auto;
-        width: 411px;
+    .cover-home-desk{
+      display: none;
     }
     
-    .imagem-card {
-        width: 411px;
-        height: 411px;
-        border-radius: 200px 200px 0 0;
-        contain: content;
-        border-bottom: 4px solid var(--cor-primaria);
+    .cover-home-mobile{
+      display: block;
     }
-
-    #logo-bosque{
-        margin: 20px auto;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media screen and (min-width: 768px){
-
-} */
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media screen and (min-width: 992px){
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1920px){
-    .cover{
-        background-size: cover;
-        height: 110vh;
-    }
-} */
-
+  }
+  
+  
+  
+  

@@ -21,33 +21,17 @@
 </head>
 <body>
     <header>
-        <div class="cover">
-            <!-- Nav codepen: -->
-            <!--    Made by Erik Terwan    -->
-            <!--   24th of November 2015   -->
-            <!--        MIT License        -->
-            <nav role="navigation">
-                <div id="menuToggle">
-                  <!--
-                  A fake / hidden checkbox is used as click reciever,
-                  so you can use the :checked selector on it.
-                  -->
-                  <input type="checkbox" />
-                  
-                  <!--
-                  Some spans to act as a hamburger.
-                  
-                  They are acting like a real hamburger,
-                  not that McDonalds stuff.
-                  -->
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  
-                  <!--
-                  Too bad the menu has to be inside of the button
-                  but hey, it's pure CSS magic.
-                  -->
+        <!-- <div class="cover"> -->
+        <div>
+            <img src="img/Cover_AmandaTiago_Desktop.jpg" width="100%" alt="" class="cover-home-desk">
+            <img src="img/cover_smartphone_teste_Mobile.jpg" width="100%" alt="" class="cover-home-mobile">
+            
+            <nav>
+                <div class="hamburger-menu" onclick="menuativo();" >
+                    <div class="bar-top"></div>
+                    <div class="bar-middle"></div>
+                    <div class="bar-bottom"></div>
+
                   <ul id="menu">
                     <a href="index.html"><li class="pag-ativa">Home</li></a>
                     <a href="html/porto.html"><li style="line-height: 1.6rem;">Onde ficar <br> no Porto?</li></a>
@@ -85,7 +69,7 @@
             </div>
         </div>
 
-        <hr>
+        <hr class="divisoria">
 
         <!-- Seção História dos Noivos -->
         <div id="historia" class="titulo-secao">
@@ -184,7 +168,7 @@
             <h1>e Recepção</h1>
         </div>
         <div class="quinta">
-            <div>
+            <div class="col-quinta">
                 <div id="logo-bosque">
                     <img src="img/bosqueTiaMila.svg" alt="logo-boque-tia-mila">
                 </div>
@@ -201,11 +185,11 @@
                     </div>
                 </div>
             </div>
-            <div id="map">
+            <div id="map" class="col-quinta">
             </div>
         </div>
 
-        <hr>
+        <hr class="divisoria">
 
         <!-- Seção Formulário -->
         <div id="rsvp" class="titulo-secao">
@@ -318,6 +302,18 @@
 
         Esri_WorldGrayCanvas.addTo(map);
 
+    </script>
+
+    <script>
+        function menuativo () { 
+            var x = document.getElementById("menu");
+            if(x.style.display === "block"){
+                x.style.display = "none";
+            }
+            else{
+                x.style.display = "block";
+            }
+         }
     </script>
 
 </body>

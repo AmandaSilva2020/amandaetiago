@@ -13,32 +13,12 @@
 <body>
     <header>
         <div class="cover-viladoconde">
-            <!-- Nav codepen: -->
-            <!--    Made by Erik Terwan    -->
-            <!--   24th of November 2015   -->
-            <!--        MIT License        -->
-            <nav role="navigation">
-                <div id="menuToggle">
-                  <!--
-                  A fake / hidden checkbox is used as click reciever,
-                  so you can use the :checked selector on it.
-                  -->
-                  <input type="checkbox" />
+            <nav>
+                <div class="hamburger-menu" onclick="menuativo();" >
+                    <div class="bar-top"></div>
+                    <div class="bar-middle"></div>
+                    <div class="bar-bottom"></div>
                   
-                  <!--
-                  Some spans to act as a hamburger.
-                  
-                  They are acting like a real hamburger,
-                  not that McDonalds stuff.
-                  -->
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  
-                  <!--
-                  Too bad the menu has to be inside of the button
-                  but hey, it's pure CSS magic.
-                  -->
                   <ul id="menu">
                     <a href="../index.html"><li>Home</li></a>
                     <a href="porto.html"><li style="line-height: 1.6rem;">Onde ficar <br> no Porto?</li></a>
@@ -66,63 +46,66 @@
         <div class="hoteis" style="margin-bottom: 40px;">
             <!-- Hotel 1 - Hotel Brazão -->
             <div class="card-casamento">
-                <div class="nome-hotel">
-                    <h2>Hotel Brazão</h2>
-                </div>
-                <!-- Slider -->
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="../img/hotel brazao/20210712_193043.jpeg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../img/hotel brazao/20210804_211104.jpeg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../img/hotel brazao/20211219_110911.jpeg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../img/hotel brazao/2022-01-25.jpeg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../img/hotel brazao/ARM_0265.jpeg" class="d-block w-100" alt="...">
-                      </div>
+                <div class="conteudo-card">
+                    <div class="nome-hotel">
+                        <h2>Hotel Brazão</h2>
                     </div>
-                  </div>
-                <div class="descricao">
-                    <p>
-                        A 11 minutos a pé da praia e da paragem de metro mais próxima, este hotel prático, propriedade da igreja, ocupa uma residência do século XVII, a 4 km das lojas da Rua da Junqueira.
-
-                    </p>
-                    <p>
-                        Os quartos com decoração simples dispõem de Wi-Fi grátis e TV de ecrã plano. As suites incluem sala de estar com sofá-cama.
-                    </p>
-                    <p>
-                        O hotel disponibiliza gratuitamente estacionamento e buffet de pequeno-almoço, servido num restaurante. O bar e lounge incluem uma mesa de bilhar e decoração tradicional.
-                    </p>
-                </div>
-                <div class="outras-infos">
-                    <p><strong>Hora de chegada:</strong> 14:00</p>
-                    <p><strong>Hora de partida:</strong> 12:00</p>
-                    <p class="classificacao"><strong>Faixa de preço:</strong></p>
-                    <div class="classificacao-estrelas">
-                        <span>
-                            <img src="../img/icons/star-fill.svg" alt="">
-                        </span>
-                        <span>
-                            <img src="../img/icons/star-fill.svg" alt="">
-                        </span>
-                        <span>
-                            <img src="../img/icons/star.svg" alt="">
-                        </span>
-                        <span>
-                            <img src="../img/icons/star.svg" alt="">
-                        </span>
-                        <span>
-                            <img src="../img/icons/star.svg" alt="">
-                        </span>
+                    <!-- Slider -->
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="../img/hotel brazao/20210712_193043.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/hotel brazao/20210804_211104.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/hotel brazao/20211219_110911.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/hotel brazao/2022-01-25.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/hotel brazao/ARM_0265.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                      </div>
+                    <div class="descricao">
+                        <p>
+                            A 11 minutos a pé da praia e da paragem de metro mais próxima, este hotel prático, propriedade da igreja, ocupa uma residência do século XVII, a 4 km das lojas da Rua da Junqueira.
+    
+                        </p>
+                        <p>
+                            Os quartos com decoração simples dispõem de Wi-Fi grátis e TV de ecrã plano. As suites incluem sala de estar com sofá-cama.
+                        </p>
+                        <p>
+                            O hotel disponibiliza gratuitamente estacionamento e buffet de pequeno-almoço, servido num restaurante. O bar e lounge incluem uma mesa de bilhar e decoração tradicional.
+                        </p>
+                        <p>O tempo para ir deste hotel até o local do casamento, de carro, é de aproximadamente <strong>8 minutos</strong></p>
                     </div>
-
+                    <div class="outras-infos">
+                        <p><strong>Hora de chegada:</strong> 14:00</p>
+                        <p><strong>Hora de partida:</strong> 12:00</p>
+                        <p class="classificacao"><strong>Faixa de preço:</strong></p>
+                        <div class="classificacao-estrelas">
+                            <span class="euro_cheio">
+                                €
+                            </span>
+                            <span class="euro_cheio">
+                                €
+                            </span>
+                            <span class="euro_cheio">
+                                €
+                            </span>
+                            <span>
+                                €
+                            </span>
+                            <span>
+                                €
+                            </span>
+                        </div>
+    
+                    </div>
                 </div>
                 <div class="btn-casamento">
                     <a href="https://www.hotelbrazao.pt/" target="_blank">Visitar site do hotel</a>
@@ -131,60 +114,63 @@
             
             <!-- Hotel 2 - Villa C Boutique Hotel -->
             <div class="card-casamento">
-                <div class="nome-hotel">
-                    <h2>Villa C Boutique Hotel</h2>
-                </div>
-                <!-- Slider -->
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="../img/hotel villa C/MS_0030.jpeg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../img/hotel villa C/MS_0502.jpeg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../img/hotel villa C/MS_1027.jpeg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../img/hotel villa C/MS_3003.jpeg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../img/hotel villa C/MS_3010.jpeg" class="d-block w-100" alt="...">
-                      </div>
+                <div class="conteudo-card">
+                    <div class="nome-hotel">
+                        <h2>Villa C Boutique Hotel</h2>
                     </div>
-                  </div>
-                <div class="descricao">
-                    <p>
-                        Situado num edifício modernista em betão numa estrada principal, este hotel contemporâneo fica a 13 minutos a pé do centro histórico da cidade e a 16 minutos a pé da Praia da Azurara.
-                    </p>
-                    <p>
-                        Os quartos arejados e de linhas simples incluem Wi-Fi e TV de ecrã plano, além de minibar e varanda. As suites dispõem de máquina de café e área de estar.
-                    </p>
-                    <p>
-                        Pequeno-almoço disponível. O restaurante/bar de estilo industrial sofisticado inclui janelas panorâmicas e serve gastronomia local rústica. Dispõe também de ginásio e spa.
-                    </p>
-                </div>
-                <div class="outras-infos">
-                    <p><strong>Hora de chegada:</strong> 14:00</p>
-                    <p><strong>Hora de partida:</strong> 12:00</p>
-                    <p class="classificacao"><strong>Faixa de preço:</strong></p>
-                    <div class="classificacao-estrelas">
-                        <span>
-                            <img src="../img/icons/star-fill.svg" alt="">
-                        </span>
-                        <span>
-                            <img src="../img/icons/star-fill.svg" alt="">
-                        </span>
-                        <span>
-                            <img src="../img/icons/star-fill.svg" alt="">
-                        </span>
-                        <span>
-                            <img src="../img/icons/star.svg" alt="">
-                        </span>
-                        <span>
-                            <img src="../img/icons/star.svg" alt="">
-                        </span>
+                    <!-- Slider -->
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="../img/hotel villa C/MS_0030.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/hotel villa C/MS_0502.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/hotel villa C/MS_1027.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/hotel villa C/MS_3003.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/hotel villa C/MS_3010.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                      </div>
+                    <div class="descricao">
+                        <p>
+                            Situado num edifício modernista em betão numa estrada principal, este hotel contemporâneo fica a 13 minutos a pé do centro histórico da cidade e a 16 minutos a pé da Praia da Azurara.
+                        </p>
+                        <p>
+                            Os quartos arejados e de linhas simples incluem Wi-Fi e TV de ecrã plano, além de minibar e varanda. As suites dispõem de máquina de café e área de estar.
+                        </p>
+                        <p>
+                            Pequeno-almoço disponível. O restaurante/bar de estilo industrial sofisticado inclui janelas panorâmicas e serve gastronomia local rústica. Dispõe também de ginásio e spa.
+                        </p>
+                        <p>O tempo para ir deste hotel até o local do casamento, de carro, é de aproximadamente <strong>7 minutos</strong></p>
+                    </div>
+                    <div class="outras-infos">
+                        <p><strong>Hora de chegada:</strong> 14:00</p>
+                        <p><strong>Hora de partida:</strong> 12:00</p>
+                        <p class="classificacao"><strong>Faixa de preço:</strong></p>
+                        <div class="classificacao-estrelas">
+                            <span class="euro_cheio">
+                                €
+                            </span>
+                            <span class="euro_cheio">
+                                €
+                            </span>
+                            <span class="euro_cheio">
+                                €
+                            </span>
+                            <span class="euro_cheio">
+                                €
+                            </span>
+                            <span>
+                                €
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div class="btn-casamento">
@@ -194,60 +180,63 @@
 
             <!-- Hotel 3 - Santana Hotel & Spa -->
             <div class="card-casamento">
-                <div class="nome-hotel">
-                    <h2>Santana Hotel & Spa</h2>
-                </div>
-                <!-- Slider -->
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="../img/hotelSantana/1455873_25_b.jpeg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../img/hotelSantana/1455873_26_b.jpeg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../img/hotelSantana/m-(1).jpeg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../img/hotelSantana/m-(2).jpeg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../img/hotelSantana/m.jpeg" class="d-block w-100" alt="...">
-                      </div>
+                <div class="conteudo-card">
+                    <div class="nome-hotel">
+                        <h2>Santana Hotel & Spa</h2>
                     </div>
-                  </div>
-                <div class="descricao">
-                    <p>
-                        Este hotel informal fica a 3 km da arenosa Praia Atlântica e a um quilómetro do Museu das Rendas de Bilros.
-                    </p>
-                    <p>
-                        As suites e os quartos discretos oferecem Wi-Fi grátis, TV de ecrã plano e minibar, para além de cofre e casa de banho privativa. Alguns dispõem de varanda e/ou áreas de estar. Serviço de quarto disponível.
-                    </p>
-                    <p>
-                        Estacionamento gratuito. Outras comodidades incluem restaurante, bar na entrada e espaço para reuniões e eventos. Dispõe de spa com piscina interior aquecida, banheira de hidromassagem e ginásio, para além de banho turco. Pequeno-almoço disponível.
-                    </p>
-                </div>
-                <div class="outras-infos">
-                    <p><strong>Hora de chegada:</strong> 12:00</p>
-                    <p><strong>Hora de partida:</strong> 12:00</p>
-                    <p class="classificacao"><strong>Faixa de preço:</strong></p>
-                    <div class="classificacao-estrelas">
-                        <span>
-                            <img src="../img/icons/star-fill.svg" alt="">
-                        </span>
-                        <span>
-                            <img src="../img/icons/star-fill.svg" alt="">
-                        </span>
-                        <span>
-                            <img src="../img/icons/star-fill.svg" alt="">
-                        </span>
-                        <span>
-                            <img src="../img/icons/star-fill.svg" alt="">
-                        </span>
-                        <span>
-                            <img src="../img/icons/star.svg" alt="">
-                        </span>
+                    <!-- Slider -->
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="../img/hotelSantana/1455873_25_b.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/hotelSantana/1455873_26_b.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/hotelSantana/m-(1).jpeg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/hotelSantana/m-(2).jpeg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/hotelSantana/m.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                      </div>
+                    <div class="descricao">
+                        <p>
+                            Este hotel informal fica a 3 km da arenosa Praia Atlântica e a um quilómetro do Museu das Rendas de Bilros.
+                        </p>
+                        <p>
+                            As suites e os quartos discretos oferecem Wi-Fi grátis, TV de ecrã plano e minibar, para além de cofre e casa de banho privativa. Alguns dispõem de varanda e/ou áreas de estar. Serviço de quarto disponível.
+                        </p>
+                        <p>
+                            Estacionamento gratuito. Outras comodidades incluem restaurante, bar na entrada e espaço para reuniões e eventos. Dispõe de spa com piscina interior aquecida, banheira de hidromassagem e ginásio, para além de banho turco. Pequeno-almoço disponível.
+                        </p>
+                        <p>O tempo para ir deste hotel até o local do casamento, de carro, é de aproximadamente <strong>7 minutos</strong></p>
+                    </div>
+                    <div class="outras-infos">
+                        <p><strong>Hora de chegada:</strong> 12:00</p>
+                        <p><strong>Hora de partida:</strong> 12:00</p>
+                        <p class="classificacao"><strong>Faixa de preço:</strong></p>
+                        <div class="classificacao-estrelas">
+                            <span class="euro_cheio">
+                                €
+                            </span>
+                            <span class="euro_cheio">
+                                €
+                            </span>
+                            <span class="euro_cheio">
+                                €
+                            </span>
+                            <span class="euro_cheio">
+                                €
+                            </span>
+                            <span>
+                                €
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div class="btn-casamento">
@@ -276,6 +265,16 @@
                 moreText.style.display = "inline";
             }
         }
+
+        function menuativo () { 
+            var x = document.getElementById("menu");
+            if(x.style.display === "block"){
+                x.style.display = "none";
+            }
+            else{
+                x.style.display = "block";
+            }
+         }
     </script>
 </body>
 </html>
