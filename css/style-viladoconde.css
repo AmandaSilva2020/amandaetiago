@@ -56,3 +56,25 @@ p{
     margin-bottom: 0;
     font-size: 1.4em;
 }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+    .hoteis{
+        gap: 20px;
+    flex-direction: row;
+    }
+    .card-casamento{
+        display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    #main-container {
+      /* width: 520px; */
+      width: 281px;
+    }
+  }
