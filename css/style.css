@@ -529,6 +529,9 @@ hr {
     #logo-bosque{
         margin: auto;
     }
+    .sobre-cidade{
+      text-align: left;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
