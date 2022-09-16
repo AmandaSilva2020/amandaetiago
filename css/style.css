@@ -421,6 +421,10 @@
     justify-content: center;
     gap: 10px;
   }
+
+  #link-quinta{
+    text-decoration: underline;
+  }
   
   .material-symbols-outlined {
     color: var(--cor-primaria);
