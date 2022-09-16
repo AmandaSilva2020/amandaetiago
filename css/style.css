@@ -56,22 +56,11 @@
     color: var(--cor-primaria);
   }
   
-  /* Nav */
-  /* #menuToggle {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    z-index: 1;
-    -webkit-user-select: none;
-    user-select: none;
-    cursor: pointer;
-  } */
-  
   /* menu hamb novo */
   .hamburger-menu {
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 20px;
+    right: 30px;
     margin: 2rem;
     display: flex;
     flex-flow: column wrap;
@@ -88,8 +77,6 @@
     background: var(--cor-primaria);
     border-radius: 5px;
     margin: 3px 0;
-    transform-origin: left;
-    transition: all 0.5s;
   }
   
   #menu a {
@@ -219,7 +206,7 @@
     display: flex;
     justify-content: center;
     padding: 10px 20px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .btn-casamento{
       width: 100%;
@@ -253,11 +240,12 @@
   #counter h1 {
     padding-left: 12px;
     letter-spacing: 12px;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 500;
   }
   
   #numDias {
+    font-family: 'Times New Roman', Times, serif;
     width: 100%;
     padding-left: 50px;
     letter-spacing: 40px;
@@ -267,6 +255,10 @@
     border-bottom: 1px solid var(--cor-primaria);
     margin-bottom: 5px;
     margin-top: 5px;
+  }
+  
+  #horas, #minutos, #segundos {
+    font-family: 'Times New Roman', Times, serif;
   }
   
   #dias {
@@ -289,6 +281,7 @@
   #countdown div {
     display: flex;
     align-items: center;
+    margin-top: 5px;
   }
   
   #countdown div .data {
@@ -529,12 +522,18 @@
     .cover-home-mobile{
       display: block;
     }
-
+  
     .hamburger-menu {
-        top: 0px;
-        right: 15px;
-        margin: 2rem;
-      }
+      top: 10px;
+      right: 30px;
+      margin: 1rem;
+      justify-content: flex-start;
+      width: 2rem;
+    }
+  
+    .bar-top, .bar-middle, .bar-bottom {
+      height: 3px;
+    }
   }
   
   
