@@ -18,6 +18,11 @@
   src: url(../assets/times-new-roman-grassetto.ttf);
 }
 
+@font-face {
+  font-family: TNR;
+  src: url(../assets/times.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -263,7 +268,7 @@ a {
 }
 
 #horas, #minutos, #segundos {
-  font-family: "TNR-Bold", serif;
+  font-family: "TNR", serif;
 }
 
 #dias {
