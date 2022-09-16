@@ -529,6 +529,12 @@
     .cover-home-mobile{
       display: block;
     }
+
+    .hamburger-menu {
+        top: 15px;
+        right: 15px;
+        margin: 2rem;
+      }
   }
   
   
