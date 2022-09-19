@@ -23,6 +23,10 @@
   src: url(../assets/times.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
