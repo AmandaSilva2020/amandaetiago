@@ -109,44 +109,6 @@ a {
   color: var(--cor-primaria);
 }
 
-#menu input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-
-  cursor: pointer;
-
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-
-  background: var(--cor-primaria);
-  border-radius: 3px;
-
-  z-index: 1;
-
-  transform-origin: 4px 0px;
-
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-}
-
-
 
 /*
  * Make this absolute positioned
@@ -170,13 +132,6 @@ a {
   font-size: 22px;
 }
 
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul {
-  transform: none;
-}
-
 /* Botão de retorno para o topo */
 #btnTop {
   display: none; /* Hidden by default */
@@ -187,7 +142,7 @@ a {
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   background-color: transparent; /* Set a background color */
-  color: var(--cor-primaria); /* Text color */
+  color: var(--cor-secundaria); /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   font-size: 40px; /* Increase font size */
   text-align: center;
@@ -598,7 +553,7 @@ hr {
   }
   
   #btnTop:hover {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
