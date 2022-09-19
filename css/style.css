@@ -142,7 +142,7 @@ a {
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   background-color: transparent; /* Set a background color */
-  color: var(--cor-secundaria); /* Text color */
+  color: #cccccc; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   font-size: 40px; /* Increase font size */
   text-align: center;
