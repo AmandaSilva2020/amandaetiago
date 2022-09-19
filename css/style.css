@@ -590,6 +590,16 @@ hr {
   .bar-top, .bar-middle, .bar-bottom {
     height: 3px;
   }
+
+  #btnTop {
+    bottom: 10px;
+    right: 10px;
+    font-size: 30px;
+  }
+  
+  #btnTop:hover {
+    font-size: 20px;
+  }
 }
 
 
