@@ -29,10 +29,10 @@
     <header>
         <div class="cover-porto">
             <nav>
-                <div class="hamburger-menu" onclick="menuativo();" >
-                    <div class="bar-top"></div>
-                    <div class="bar-middle"></div>
-                    <div class="bar-bottom"></div>
+                <div id="hamburger-menu" class="hamburger-menu" >
+                    <div id="bar-top" class="bar-top"></div>
+                    <div id="bar-middle" class="bar-middle"></div>
+                    <div id="bar-bottom" class="bar-bottom"></div>
                   
                   <ul id="menu">
                     <a href="../index.html"><li>Home</li></a>
@@ -276,15 +276,19 @@
     </div>
 
     <script>
-        function menuativo () { 
-            var x = document.getElementById("menu");
-            if(x.style.display === "block"){
-                x.style.display = "none";
-            }
-            else{
-                x.style.display = "block";
-            }
-         }
+        // Animate menu
+        var menuHamb = document.getElementById("hamburger-menu");
+        var bar1 = document.getElementById("bar-top");
+        var bar2 = document.getElementById("bar-middle");
+        var bar3 = document.getElementById("bar-bottom");
+        var menuList = document.getElementById("menu")
+
+        menuHamb.addEventListener("click", function() {
+            bar1.classList.toggle("a");
+            bar2.classList.toggle("b");
+            bar3.classList.toggle("c");
+            menuList.classList.toggle("show");
+        });
 
         // Botão back to top
         // Get the button:

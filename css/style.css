@@ -91,6 +91,19 @@ a {
   background: var(--cor-primaria);
   border-radius: 5px;
   margin: 3px 0;
+  transform-origin: left;
+  transition: all 0.5s;
+}
+
+.bar-top.a {
+  transform: rotate(45deg);
+}
+.bar-middle.b {
+  transform:translateX(1rem);
+  opacity: 0;
+}
+.bar-bottom.c {
+  transform: rotate(-45deg);
 }
 
 #menu a {
@@ -130,6 +143,10 @@ a {
   background: rgb(237 237 237 / 90%);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
+}
+
+#menu.show{
+  display: block;
 }
 
 #menu li {
