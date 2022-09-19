@@ -585,6 +585,14 @@ hr {
   #btnTop:hover {
     font-size: 30px;
   }
+
+  .bar-top.a {
+    transform: rotate(35deg);
+  }
+  
+  .bar-bottom.c {
+    transform: rotate(-35deg);
+  }
 }
 
 
