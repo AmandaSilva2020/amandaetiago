@@ -305,6 +305,7 @@ a {
 hr {
   width: 6rem;
   margin: 20px auto;
+  border-bottom: 1px solid var(--cor-secundaria);
   border-top-style: none;
   border-left-style: none;
   border-right-style: none;
