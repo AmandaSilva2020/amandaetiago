@@ -175,10 +175,10 @@
                 </div>
                 <div id="morada">
                     <p>
-                        Rua da Estrada Velha, n.966, <br> Mindelo, Vila do Conde
+                        Rua da Estrada Velha, n.966, <br>Mindelo, Vila do Conde <br>Porto, Portugal
                     </p>
                     <hr>
-                    <p>Porto, Portugal</p>
+                    <p>27 de maio de 2023, <br>sábado, às 17:30</p>
                     <br>
                     <div>
                         <span class="material-symbols-outlined">location_on</span>
@@ -190,10 +190,10 @@
             </div>
         </div>
 
-        <hr id="rsvp" class="divisoria">
+        <hr class="divisoria">
 
         <!-- Seção Formulário -->
-        <div class="titulo-secao">
+        <div id="rsvp" class="titulo-secao">
             <h1>Confirmar</h1>
             <h1>presença</h1>
         </div>
@@ -212,7 +212,7 @@
                     <input type="email" name="email" id="email" required>
                 </div>
                 <div>
-                    <label for="presenca">Estarás presente? <span>(obrigatório)</span></label>
+                    <label for="presenca">Estará presente? <span>(obrigatório)</span></label>
                     <select name="Presença no casamento" id="attending" required>
                         <option value="" selected></option>
                         <option value="Sim">Sim</option>
@@ -272,7 +272,7 @@
         // Mapa
         var map = L.map('map', {
             zoomControl: false
-        }).setView([41.21406046776173, -8.658319485822066], 9);
+        }).setView([41.36180705606454, -8.72393161273013], 9);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -284,16 +284,13 @@
             iconUrl: 'img/location_on_FILL1_wght400_GRAD0_opsz48.svg',
             iconSize: [38,38],
             iconAnchor: [20,30],
-            popupAnchor: [1,-8], 
+            popupAnchor: [-1,-19], 
         })
 
         // Marcador da Quinta
         var marker = L.marker([41.32180705606454, -8.72393161273013], {icon:leafletIcon}).addTo(map);
 
         marker.bindPopup("<b>Bosque da Tia Mila</b><br>Quinta para casamentos.").openPopup();
-        
-        // Marcador do Porto
-        var marker = L.marker([41.1577203567119, -8.629270777357258], {icon:leafletIcon} ).addTo(map);
 
         // Mapa Esri_WorldGrayCanvas - Cinza
         var Esri_WorldGrayCanvas = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
