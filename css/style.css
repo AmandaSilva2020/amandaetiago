@@ -122,7 +122,8 @@ a {
   top: -50px;
   padding: 50px;
   padding-top: 125px;
-  background: #ededed;
+  border-radius: 0 0 0 10px;
+  background: rgb(237 237 237 / 90%);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
 }
@@ -522,6 +523,14 @@ hr {
   }
   #menu{
     right: -50px;
+    width: 250px;
+    padding: 30px;
+    padding-top: 100px;
+    border-radius: 0 0 0 10px;
+  }
+  #menu li {
+    padding: 8px 0;
+    font-size: 20px;
   }
   #submit {
     width: 100%;
