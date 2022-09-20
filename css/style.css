@@ -349,6 +349,8 @@ hr {
 }
 
 .imagem-card {
+  clip-path: border-box; /* Para safari antigo - clip da imagem */
+  position: -webkit-sticky; /* Para safari antigo - posição da imagem */
   width: 281px;
   height: 281px;
   border-radius: 150px 150px 0 0;
