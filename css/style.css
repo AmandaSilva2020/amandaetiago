@@ -486,6 +486,10 @@ hr {
   color: var(--cor-primaria);
 }
 
+.formulario strong {
+  font-family: "DINPro-Medium", sans-serif;
+}
+
 #submit{
     width: 400px;
     margin: 20px auto;
