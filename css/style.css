@@ -520,7 +520,7 @@ footer{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 25px 0 50px 0;
+  padding: 15px 0 50px 0;
 }
 
 .imagem-e-linha{
@@ -528,6 +528,10 @@ footer{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.imagem-e-linha img{
+  width: 80px;
 }
 
 .footer-texto-links .footer-frase h1{
@@ -560,7 +564,7 @@ footer{
   padding: 5px 20px;
   width: 100%;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .container-footer .footer-texto-links .links a:last-child{
@@ -613,8 +617,11 @@ footer{
       width: 60%;
     }
     .imagem-e-linha{
-      margin-bottom: 25px;
+      margin-bottom: 0;
       flex: 1;
+    }
+    .imagem-e-linha img{
+      width: 35px;
     }
     .footer-texto-links{
       flex-direction: row;
