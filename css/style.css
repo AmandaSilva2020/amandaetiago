@@ -536,6 +536,7 @@ footer{
 
 .footer-texto-links hr{
   border-bottom: 1px solid #cccccc;
+  opacity: 1;
 }
 
 .footer-texto-links{
