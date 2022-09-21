@@ -713,6 +713,10 @@ footer{
   .container-footer .footer-texto-links .links {
     margin-top: 5px;
   }
+
+  .container-footer .footer-texto-links .links a {
+    font-size: 17px;
+  }
 }
 
 
