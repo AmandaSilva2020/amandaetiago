@@ -489,6 +489,7 @@ hr {
 #submit{
     width: 400px;
     margin: 20px auto;
+    cursor: pointer;
 }
 
 .euro_cheio{
