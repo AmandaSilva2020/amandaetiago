@@ -596,11 +596,11 @@ footer{
         padding: 10px 0;
     }
     .card{
-  height: 530px;
+        height: 530px;
     }
     .quinta{
         flex-direction: row;
-    width: 100%;
+        width: 100%;
     }
     .col-quinta{
         margin: auto;
@@ -609,7 +609,7 @@ footer{
         margin: auto;
     }
     .sobre-cidade{
-      text-align: left;
+        text-align: left;
     }
 
     /* footer */
@@ -637,6 +637,7 @@ footer{
     .footer-texto-links .footer-frase h1{
       margin: 10px 0;
       width: 80%;
+      font-size: 21px;
     }
     .footer-texto-links .footer-frase hr{
       margin: 0 auto;
