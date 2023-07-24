@@ -222,51 +222,7 @@
 
         <hr class="divisoria" style="margin-bottom: 30px;">
 
-        <!-- Seção Formulário -->
-        <div id="rsvp" class="titulo-secao" style="display: none; padding-top: 30px;">
-            <h1>Confirmar</h1>
-            <h1>presença</h1>
-        </div>
-        <div class="formulario" style="display: none;">
-            <form action="https://formspree.io/f/myyvyvwb" method="POST">
-                <div>
-                    <label for="nome">Nome <span>(obrigatório)</span></label>
-                    <input type="text" name="Nome" id="nome" required>
-                </div>
-                <div>
-                    <label for="ultimo-nome">Último Nome <span>(obrigatório)</span></label>
-                    <input type="text" name="Último Nome" id="ultimoNome" required>
-                </div>
-                <div>
-                    <label for="email">E-mail <span>(obrigatório)</span></label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-                <div>
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" name="telefone" id="telefone">
-                </div>
-                <div>
-                    <label for="presenca">Estará presente? <span>(obrigatório)</span></label>
-                    <select name="Presença no casamento" id="attending" required>
-                        <option value="" selected></option>
-                        <option value="Sim">Sim</option>
-                        <option value="Não">Não</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="acompanhantes">Nome e último nome dos acompanhantes:</label>
-                    <textarea name="Acompanhantes" id="nome-acompanhante" cols="30" rows="10"></textarea>
-                </div>
-                <div>
-                    <label for="mensagem">Deixa a tua mensagem para os Noivos:</label>
-                    <textarea name="Mensagem aos noivos" id="mensagem-noivos" cols="30" rows="10"></textarea>
-                </div>
-                <p><span>*Por favor, confirma até <span style="font-family: 'DINPro-Medium';">02/04/2023</span></span></p>
-                <input type="hidden" name="_subject" id="email-subject" value="RSVP">
-                <button type="submit" id="submit" value="RSVP">Confirmar</button>
-            </form>
-
-        </div>
+        
     </div>
 
     <!-- Footer -->
@@ -319,7 +275,7 @@
             // Se a contagem estiver terminada, mostrar outra mensagem
             if(distance < 0) {
                 clearInterval(x);
-                document.getElementById("countdown").innerHTML = "JÁ CASAMOS!";
+                document.getElementById("counter").innerHTML = "JÁ CASAMOS!";
             }
         }, 1000);
     </script>
